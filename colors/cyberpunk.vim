@@ -45,21 +45,14 @@ call HighlightFor("Cursor",       "#00FFC8", "NONE",    "NONE")
 call HighlightFor("CursorLineNr", "#140007", "#00FFC8", "NONE")
 
 " Cursorline type
-if exists("g:cyberpunk_cursorline") && g:cyberpunk_cursorline == "black"
-  call HighlightFor("CursorLine",   "NONE", "#000000", "NONE")
-else
+" if exists("g:cyberpunk_cursorline") && g:cyberpunk_cursorline == "black"
+  " call HighlightFor("CursorLine",   "NONE", "#000000", "NONE")
+" else
   call HighlightFor("CursorLine",   "#140007", "#FF0055", "NONE")
-endif
+" endif
 
 call HighlightFor("CursorColumn", "NONE",    "NONE",    "NONE")
 " }}}
-
-if exists("g:transparent_enabled")
-  call HighlightFor("Normal", "#FFFFFF", "NONE", "NONE") " Cambia el color del texto a blanco
-  call HighlightFor("CursorLine", "#FFFFFF", "#282828", "NONE") " Ajusta el color de la línea activa
-endif
-
-
 
 " Code {{{
 " The following groups are not builtin but are defined commonly in syntax files
