@@ -111,3 +111,17 @@ call HighlightFor("TabLineSel",  "#FF4081", "NONE", "bold")
 call HighlightFor("Folded",     "#00FFC8", "NONE", "italic")
 call HighlightFor("FoldColumn", "#00FFC8", "NONE", "NONE")
 " }}}
+
+" === 💡 FIX PARA TransparentEnable ===
+augroup FixTransparency
+  autocmd!
+  autocmd ColorScheme * call FixCursorLine()
+augroup END
+
+function! FixCursorLine()
+  if exists("g:transparent_enabled")
+    call HighlightFor("CursorLine", "NONE", "#140007", "NONE")  " Mantiene el fondo al activar transparencia
+  else
+    call HighlightFor("CursorLine", "#FF0055", "#140007", "NONE")  " Configuración original
+  endif
+endfunction
