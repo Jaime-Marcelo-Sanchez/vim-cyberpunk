@@ -42,7 +42,7 @@ call HighlightFor("Title",     "#c592ff", "NONE", "NONE")
 
 " Cursor {{{
 call HighlightFor("Cursor",       "#00FFC8", "NONE",    "NONE")
-call HighlightFor("CursorLineNr", "#140007", "#00FFC8", "NONE")
+call HighlightFor("CursorLineNr", "#00FFC8", "#140007", "NONE")
 
 " Cursorline type
 if exists("g:cyberpunk_cursorline") && g:cyberpunk_cursorline == "black"
@@ -98,7 +98,7 @@ call HighlightFor("PmenuThumb", "NONE",    "NONE",    "NONE")
 
 " Status line {{{
 call HighlightFor("StatusLine",   "#ff0055", "#1d000a", "bold")
-call HighlightFor("StatusLineNC", "#ff0055", "#000000", "NONE")
+call HighlightFor("StatusLineNC", "#ff0055", "#140007", "NONE")
 " }}}
 
 " Tab pages {{{
